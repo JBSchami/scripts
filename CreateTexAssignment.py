@@ -84,6 +84,7 @@ with open(newFileName, "w") as f1:
 		newProblemName = "%s_%s%s_Q%d.tex" % (courseID, assignmentType, assignmentNumber,x+1)
 		with open(newProblemName, "w") as question:
 			question.write("\\begin{homeworkProblem}\n\n")
+			question.write("\t \\lipsum \n")
 			question.write("\\end{homeworkProblem}")
 			question.close()
 		f1.write("\n \\input{%s}" %newProblemName)
